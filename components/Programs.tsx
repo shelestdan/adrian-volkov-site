@@ -94,11 +94,15 @@ export default function Programs() {
               : "(min-width: 1280px) 28vw, (min-width: 768px) 50vw, 100vw";
 
             return (
-              <Reveal key={program.title} delay={index * 0.08}>
+              <Reveal
+                key={program.title}
+                delay={index * 0.08}
+                className={`min-w-0 ${shellClass}`}
+              >
                 <motion.article
                   whileHover={{ y: -8 }}
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className={`group editorial-panel relative h-full overflow-hidden ${shellClass}`}
+                  className="group editorial-panel relative h-full overflow-hidden"
                 >
                   <div className={`grid h-full min-w-0 gap-5 p-4 sm:p-5 lg:gap-6 lg:p-6 ${layoutClass}`}>
                     <div className={`${mediaWrapClass} min-w-0`}>
