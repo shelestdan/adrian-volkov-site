@@ -51,6 +51,8 @@ export default function MediaFrame({
   const objectPositionStyle = asset.objectPositionClassName
     ? undefined
     : { objectPosition: asset.objectPosition ?? cropPositions[asset.cropIntent] };
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const assetSrc = asset.src.startsWith("/") ? `${basePath}${asset.src}` : asset.src;
 
   return (
     <motion.div
@@ -74,7 +76,7 @@ export default function MediaFrame({
         style={motionEnabled && parallax !== 0 ? { y } : undefined}
       >
         <Image
-          src={asset.src}
+          src={assetSrc}
           alt={asset.alt}
           fill
           priority={asset.priority}
