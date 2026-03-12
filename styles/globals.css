@@ -1,0 +1,344 @@
+@import "tailwindcss";
+
+:root {
+  --font-manrope: "Manrope Variable", "Manrope", sans-serif;
+  --font-space-grotesk: "Space Grotesk Variable", "Space Grotesk", sans-serif;
+  --color-ink: #000000;
+  --color-deep: #090909;
+  --color-surface: #111111;
+  --color-elevated: #171717;
+  --color-line: #2b2b2b;
+  --color-line-strong: #444444;
+  --color-muted: #888888;
+  --color-soft: #cccccc;
+  --color-white: #ffffff;
+  --page-gutter: clamp(1.25rem, 3vw, 2.5rem);
+  --scene-space: clamp(5rem, 11vw, 9rem);
+  --frame-radius: clamp(1.4rem, 2vw, 2.3rem);
+  --max-width: 92rem;
+}
+
+@theme inline {
+  --color-background: var(--color-ink);
+  --color-foreground: var(--color-white);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-space-grotesk);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #000000;
+  color: var(--color-white);
+  font-family: var(--font-manrope), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  border-color: rgb(255 255 255 / 0.12);
+}
+
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+.page-shell {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #000000 0%, #0a0a0a 16%, #121212 32%, #0b0b0b 58%, #121212 100%);
+}
+
+.page-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgb(255 255 255 / 0.06), transparent 0 24rem),
+    radial-gradient(circle at 86% 16%, rgb(255 255 255 / 0.05), transparent 0 18rem),
+    radial-gradient(circle at 46% 54%, rgb(255 255 255 / 0.035), transparent 0 30rem);
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.page-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.015) 1px, transparent 1px);
+  background-size: 7.5rem 7.5rem;
+  opacity: 0.16;
+  mask-image: linear-gradient(180deg, transparent, #000000 12%, #000000 88%, transparent);
+  pointer-events: none;
+}
+
+.site-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.shell-inner {
+  width: min(var(--max-width), calc(100% - (var(--page-gutter) * 2)));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--color-soft);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  display: block;
+  width: 2.8rem;
+  height: 1px;
+  background: linear-gradient(90deg, #ffffff, #444444);
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.balance {
+  text-wrap: balance;
+}
+
+.scene {
+  position: relative;
+  padding-block: var(--scene-space);
+}
+
+.scene + .scene {
+  border-top: 1px solid rgb(255 255 255 / 0.07);
+}
+
+.chrome-bar {
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.58);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 64px rgb(0 0 0 / 0.32);
+}
+
+.media-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--frame-radius);
+  border: 1px solid rgb(255 255 255 / 0.12);
+  background:
+    linear-gradient(180deg, rgb(22 22 22 / 0.9), rgb(4 4 4 / 0.94));
+  isolation: isolate;
+  box-shadow: 0 32px 100px rgb(0 0 0 / 0.28);
+}
+
+.media-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgb(0 0 0 / 0.03), rgb(0 0 0 / 0.38)),
+    radial-gradient(circle at 50% 24%, rgb(255 255 255 / 0.09), transparent 42%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.media-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgb(255 255 255 / 0.015) 0,
+      rgb(255 255 255 / 0.015) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(180deg, transparent, rgb(0 0 0 / 0.34));
+  opacity: 0.28;
+  mix-blend-mode: screen;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.media-caption {
+  position: absolute;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.2rem;
+  z-index: 3;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.media-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  background: rgb(0 0 0 / 0.54);
+  border-radius: 999px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-soft);
+  backdrop-filter: blur(12px);
+}
+
+.stat-rail {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.stat-card {
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+  padding-top: 1rem;
+}
+
+.story-sticky {
+  position: sticky;
+  top: 7.5rem;
+}
+
+.story-card {
+  min-height: clamp(18rem, 34vh, 26rem);
+  align-items: center;
+}
+
+.story-surface {
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: calc(var(--frame-radius) + 0.05rem);
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.03), rgb(255 255 255 / 0.012)),
+    linear-gradient(180deg, rgb(13 13 13 / 0.95), rgb(4 4 4 / 0.98));
+  box-shadow: 0 28px 72px rgb(0 0 0 / 0.18);
+}
+
+.editorial-panel {
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: calc(var(--frame-radius) + 0.1rem);
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.035), rgb(255 255 255 / 0.012)),
+    linear-gradient(180deg, rgb(12 12 12 / 0.96), rgb(3 3 3 / 0.985));
+  box-shadow: 0 34px 90px rgb(0 0 0 / 0.2);
+}
+
+.info-card {
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 1.35rem;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.025), rgb(255 255 255 / 0.01)),
+    rgb(7 7 7 / 0.88);
+}
+
+.section-note {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.booking-sheet {
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: calc(var(--frame-radius) + 0.25rem);
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.03), rgb(255 255 255 / 0.015)),
+    linear-gradient(180deg, rgb(16 16 16 / 0.94), rgb(6 6 6 / 0.96));
+  box-shadow: 0 30px 80px rgb(0 0 0 / 0.24);
+}
+
+.booking-divider {
+  border-top: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.65rem;
+  padding: 0.9rem 1.45rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  transition:
+    transform 200ms ease,
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+.button-primary {
+  background: #ffffff;
+  color: #000000;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  background: #d9d9d9;
+}
+
+.button-secondary {
+  border: 1px solid rgb(255 255 255 / 0.14);
+  color: #ffffff;
+  background: rgb(255 255 255 / 0.03);
+}
+
+.button-secondary:hover {
+  transform: translateY(-2px);
+  border-color: rgb(255 255 255 / 0.3);
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .eyebrow::before {
+    width: 1.8rem;
+  }
+
+  .media-caption {
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: 0.9rem;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .story-card {
+    min-height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button-primary,
+  .button-secondary {
+    transition: none;
+  }
+
+  .story-sticky {
+    position: static;
+    top: auto;
+  }
+}

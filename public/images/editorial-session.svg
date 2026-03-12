@@ -1,0 +1,26 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sessionBg" x1="124" y1="84" x2="1240" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#080808"/>
+      <stop offset="1" stop-color="#131313"/>
+    </linearGradient>
+    <radialGradient id="sessionLight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1038 182) rotate(90) scale(220 220)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#sessionBg)"/>
+  <rect width="1400" height="900" fill="url(#sessionLight)"/>
+  <path d="M132 728L1182 560L1322 864H52L132 728Z" fill="#111111" stroke="#383838" stroke-width="2"/>
+  <path d="M238 706L1116 574L1224 818H154L238 706Z" stroke="#CCCCCC" stroke-width="2"/>
+  <path d="M388 686L994 598L1062 746H322L388 686Z" stroke="#444444" stroke-width="2"/>
+  <path d="M664 642L746 184" stroke="#444444" stroke-width="4" stroke-dasharray="12 12"/>
+  <path d="M446 390C446 438.601 406.601 478 358 478C309.399 478 270 438.601 270 390C270 341.399 309.399 302 358 302C406.601 302 446 341.399 446 390Z" fill="#D5D5D5"/>
+  <path d="M242 798C258 702 282 626 314 570C346 514 392 474 452 450L500 430L540 536L504 552C474.667 565.333 452 586 436 614C420 642 410 670 406 698L386 798H242Z" fill="#F4F4F4"/>
+  <path d="M842 370C842 418.601 802.601 458 754 458C705.399 458 666 418.601 666 370C666 321.399 705.399 282 754 282C802.601 282 842 321.399 842 370Z" fill="#D5D5D5"/>
+  <path d="M666 804C680 710 704 638 738 588C772 536 820 496 882 468L930 446L968 552L930 568C901.333 580 878.667 600 862 628C847.333 654.667 836 682 828 710L806 804H666Z" fill="#ECECEC"/>
+  <path d="M486 492L644 454" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M514 530L704 480" stroke="#888888" stroke-width="10" stroke-linecap="round"/>
+  <path d="M92 178H1308" stroke="#2E2E2E" stroke-width="2"/>
+  <rect x="72" y="72" width="1256" height="756" rx="38" stroke="#2E2E2E" stroke-width="2"/>
+</svg>
