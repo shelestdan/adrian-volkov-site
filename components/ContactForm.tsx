@@ -29,8 +29,8 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="booking-sheet overflow-hidden">
-      <div className="space-y-8 p-6 sm:p-8">
+    <form onSubmit={handleSubmit} className="booking-sheet h-full overflow-hidden">
+      <div className="flex h-full flex-col space-y-8 p-6 sm:p-8 xl:min-h-[27rem] xl:p-9">
         <div className="space-y-3">
           <p className="meta-label">Inquiry sheet</p>
           <p className="balance font-display text-[clamp(2rem,4vw,3.5rem)] leading-[0.94] tracking-[-0.06em] text-white">
@@ -66,7 +66,7 @@ export default function ContactForm() {
             <span className="meta-label">Message</span>
             <textarea
               name="message"
-              rows={6}
+              rows={7}
               placeholder="Tell Adrian about your level, goals, and preferred training schedule."
               className="w-full border-b border-white/14 bg-transparent px-0 pb-4 pt-2 text-base text-white outline-none placeholder:text-[#666666] transition focus:border-white/40"
             />
@@ -85,7 +85,7 @@ export default function ContactForm() {
             whileHover={{ y: -3 }}
             whileTap={{ scale: 0.98 }}
             type="submit"
-            className="button-primary"
+            className="button-primary shrink-0"
           >
             Book Training
           </motion.button>

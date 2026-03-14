@@ -34,20 +34,23 @@ export default function Programs() {
           </div>
 
           <Reveal delay={0.12} className="golden-major min-w-0">
-            <div className="editorial-panel grid gap-5 p-5 sm:p-6 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-end">
-              <div className="space-y-4">
-                <p className="section-note leading-7 text-[#888888]">
-                  Private blocks for stroke correction, player development, and
-                  tournament readiness.
-                </p>
-                <p className="max-w-2xl text-[0.98rem] leading-8 text-[#CCCCCC] sm:text-[1.03rem]">
+            <div className="editorial-panel space-y-6 p-5 sm:p-6 xl:p-7">
+              <div className="grid gap-6 xl:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] xl:items-end">
+                <div className="space-y-3">
+                  <p className="section-note">Program structure</p>
+                  <p className="max-w-[18ch] font-display text-[clamp(1.9rem,3vw,2.9rem)] leading-[1.02] tracking-[-0.045em] text-white">
+                    Private coaching formats for stroke correction, player
+                    development, and tournament readiness.
+                  </p>
+                </div>
+                <p className="max-w-none text-[1rem] leading-8 text-[#CCCCCC] sm:text-[1.04rem]">
                   From one-to-one correction to long-term development and
                   tournament preparation, each format is structured around a
                   clear training outcome rather than generic session volume.
                 </p>
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-3 xl:min-w-[26rem]">
+              <div className="grid gap-3 sm:grid-cols-3">
                 {programHighlights.map((item) => (
                   <div key={item.label} className="info-card p-4">
                     <p className="meta-label">{item.label}</p>
