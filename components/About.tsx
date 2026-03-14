@@ -27,9 +27,10 @@ export default function About() {
             <div className="order-2 min-w-0 lg:order-1">
               <MediaFrame
                 asset={authorityFrame.media}
-                className="aspect-[15/11] w-full lg:h-full lg:min-h-[31rem]"
+                className="aspect-[4/5] w-full lg:h-full lg:min-h-[32rem]"
                 sizes="(min-width: 1280px) 44vw, 100vw"
                 parallax={12}
+                showCaption={false}
               />
             </div>
 
@@ -57,7 +58,7 @@ export default function About() {
               <div className="grid gap-3 border-t border-white/8 pt-4 sm:grid-cols-[1fr_auto] sm:items-end">
                 <p className="meta-label text-[#CCCCCC]">{authorityFrame.media.meta}</p>
                 <span className="section-note text-[#888888]">
-                  Editorial portrait / calm authority
+                  Editorial portrait / pre-session calm
                 </span>
               </div>
             </div>

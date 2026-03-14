@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import MediaFrame from "@/components/MediaFrame";
 import Reveal from "@/components/Reveal";
@@ -9,14 +8,27 @@ import { storyFrames } from "@/lib/site-content";
 import { useSafeReducedMotion } from "@/lib/use-safe-reduced-motion";
 
 const methodFrames = storyFrames.slice(1);
+const methodPrinciples = [
+  {
+    label: "Observe",
+    value: "Strip the motion back to one cue the player can own immediately.",
+  },
+  {
+    label: "Refine",
+    value: "Tighten spacing, timing, and footwork before asking for more speed.",
+  },
+  {
+    label: "Transfer",
+    value: "Raise the pressure only after the correction survives live tempo.",
+  },
+];
 
 export default function Philosophy() {
   const { reducedMotion } = useSafeReducedMotion();
-  const [activeId, setActiveId] = useState(methodFrames[0].id);
 
   return (
     <section id="method" className="scene">
-      <div className="shell-inner grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
+      <div className="shell-inner grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
         <div className="min-w-0 space-y-8 lg:story-sticky lg:pr-8">
           <Reveal>
             <p className="eyebrow">Method</p>
@@ -41,42 +53,50 @@ export default function Philosophy() {
               under live point pressure.
             </p>
           </Reveal>
-
-          {!reducedMotion ? (
-            <div className="relative hidden aspect-[4/5] lg:block">
-              {methodFrames.map((frame) => (
-                <motion.div
-                  key={frame.id}
-                  animate={
-                    frame.id === activeId
-                      ? { opacity: 1, scale: 1, y: 0 }
-                      : { opacity: 0.24, scale: 0.96, y: 18 }
-                  }
-                  transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute inset-0"
-                >
-                  <MediaFrame
-                    asset={frame.media}
-                    className="h-full"
-                    sizes="(min-width: 1024px) 34vw, 0px"
-                    parallax={10}
-                  />
-                </motion.div>
-              ))}
+          <Reveal delay={0.14}>
+            <div className="editorial-panel space-y-4 p-5 sm:p-6">
+              <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+                {methodPrinciples.map((item) => (
+                  <div key={item.label} className="info-card p-4 sm:p-5">
+                    <p className="meta-label">{item.label}</p>
+                    <p className="mt-3 text-[0.98rem] leading-7 text-white">
+                      {item.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="grid gap-3 border-t border-white/8 pt-4 sm:grid-cols-[1fr_auto] sm:items-end">
+                <p className="meta-label text-[#CCCCCC]">
+                  Build quiet mechanics. Keep the cue. Raise the pace late.
+                </p>
+                <span className="section-note text-[#888888]">
+                  Editorial method rail
+                </span>
+              </div>
             </div>
-          ) : null}
+          </Reveal>
         </div>
 
         <div className="min-w-0 space-y-10 lg:space-y-12">
           {methodFrames.map((frame, index) => (
             <motion.article
               key={frame.id}
-              onViewportEnter={() => setActiveId(frame.id)}
-              viewport={{ amount: 0.45 }}
-              className={`story-surface ${reducedMotion ? "" : "story-card"} grid gap-6 p-6 sm:p-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-8 lg:p-9`}
+              whileHover={reducedMotion ? undefined : { y: -6 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              className={`story-surface ${reducedMotion ? "" : "story-card"} grid gap-6 p-6 sm:p-8 lg:gap-8 lg:p-9 ${
+                index % 2 === 0
+                  ? "lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]"
+                  : "lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)]"
+              }`}
             >
-              <Reveal delay={index * 0.05} className="min-w-0 space-y-5 self-start">
-                <p className="eyebrow">{frame.eyebrow}</p>
+              <Reveal
+                delay={index * 0.05}
+                className={`min-w-0 space-y-5 self-start ${index % 2 === 0 ? "order-1" : "order-2"}`}
+              >
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="media-chip">{frame.eyebrow}</span>
+                  <span className="meta-label text-[#CCCCCC]">0{index + 1} / 03</span>
+                </div>
                 <p className="meta-label text-[#CCCCCC]">{frame.kicker}</p>
                 <h3 className="balance font-display text-[clamp(2rem,4vw,3.5rem)] leading-[0.94] tracking-[-0.06em] text-white">
                   {frame.title}
@@ -84,23 +104,37 @@ export default function Philosophy() {
                 <p className="text-[1rem] leading-8 text-[#CCCCCC] sm:text-[1.06rem]">
                   {frame.copy}
                 </p>
+                <div className="grid gap-3 border-t border-white/8 pt-4 sm:grid-cols-[1fr_auto] sm:items-end">
+                  <p className="meta-label text-[#CCCCCC]">{frame.media.meta}</p>
+                  <span className="section-note text-[#888888]">
+                    Live correction / match transfer
+                  </span>
+                </div>
               </Reveal>
 
-              <Reveal delay={0.08} className="min-w-0 self-stretch lg:hidden">
+              <Reveal
+                delay={0.08}
+                className={`min-w-0 self-stretch ${index % 2 === 0 ? "order-2" : "order-1"} lg:hidden`}
+              >
                 <MediaFrame
                   asset={frame.media}
                   className="aspect-[5/4] sm:aspect-[4/3]"
                   sizes="100vw"
                   parallax={0}
+                  showCaption={false}
                 />
               </Reveal>
 
-              <Reveal delay={0.1} className="hidden min-w-0 self-stretch lg:block">
+              <Reveal
+                delay={0.1}
+                className={`hidden min-w-0 self-stretch lg:block ${index % 2 === 0 ? "order-2" : "order-1"}`}
+              >
                 <MediaFrame
                   asset={frame.media}
                   className="aspect-[4/5] w-full lg:min-h-[24rem] xl:aspect-[5/6]"
                   sizes="(min-width: 1024px) 26vw, 0px"
                   parallax={6}
+                  showCaption={false}
                 />
               </Reveal>
             </motion.article>

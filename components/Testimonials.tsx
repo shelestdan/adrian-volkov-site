@@ -25,6 +25,7 @@ export default function Testimonials() {
                 className="aspect-[16/11] sm:aspect-[5/6] xl:aspect-[4/5]"
                 sizes="(min-width: 1280px) 34vw, 100vw"
                 parallax={12}
+                showCaption={false}
               />
             </div>
           </Reveal>

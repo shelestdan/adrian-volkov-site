@@ -7,11 +7,14 @@ export default function Footer() {
           <a href="#authority" className="transition hover:text-white">
             Authority
           </a>
+          <a href="#method" className="transition hover:text-white">
+            Method
+          </a>
           <a href="#programs" className="transition hover:text-white">
             Programs
           </a>
-          <a href="#method" className="transition hover:text-white">
-            Method
+          <a href="#results" className="transition hover:text-white">
+            Results
           </a>
           <a href="#booking" className="transition hover:text-white">
             Booking

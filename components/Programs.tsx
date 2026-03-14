@@ -31,8 +31,7 @@ export default function Programs() {
             <div className="editorial-panel grid gap-5 p-5 sm:p-6 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-end">
               <div className="space-y-4">
                 <p className="section-note leading-7 text-[#888888]">
-                  Photo-first program architecture. Clear hierarchy. Consistent
-                  motion language.
+                  Distinct photography. Clear hierarchy. Clean editorial rhythm.
                 </p>
                 <p className="max-w-2xl text-[0.98rem] leading-8 text-[#CCCCCC] sm:text-[1.03rem]">
                   From one-to-one correction to long-term development and

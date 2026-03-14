@@ -45,8 +45,8 @@ export type ProofItem = {
 
 export const navLinks = [
   { href: "#authority", label: "Authority" },
-  { href: "#programs", label: "Programs" },
   { href: "#method", label: "Method" },
+  { href: "#programs", label: "Programs" },
   { href: "#results", label: "Results" },
   { href: "#booking", label: "Book" },
 ];
@@ -64,27 +64,27 @@ export const hero = {
   primaryCta: { label: "Book A Session", href: "#booking" },
   secondaryCta: { label: "View Programs", href: "#programs" },
   primaryMedia: {
-    src: "/images/hero-photo.jpg",
-    alt: "Black-and-white tennis court scene with a player framed in dramatic light and strong editorial negative space",
+    src: "/images/hero-clay-shadow.jpg",
+    alt: "Player shadow stretching across a clay court",
     orientation: "landscape" as const,
     cropIntent: "negative-space-left" as const,
     priority: true,
     caption: "Hero frame",
-    meta: "Shot 01 / hero / wide court light",
+    meta: "Shot 01 / hero / clay shadow",
     treatment: "monochrome-strong" as const,
     objectPositionClassName:
-      "object-[70%_46%] sm:object-[72%_46%] md:object-[74%_48%] lg:object-[76%_50%]",
+      "object-[70%_24%] sm:object-[72%_24%] md:object-[74%_26%] lg:object-[76%_28%]",
   },
   secondaryMedia: {
-    src: "/images/portrait-photo.jpg",
-    alt: "Black-and-white portrait of a tennis player framed with calm authority and enough negative space for a hero side panel",
+    src: "/images/hero-studio-portrait.jpg",
+    alt: "Coach portrait framed on an indoor court",
     orientation: "portrait" as const,
     cropIntent: "negative-space-right" as const,
     caption: "Portrait crop",
-    meta: "Shot 02 / portrait / authority side frame",
+    meta: "Shot 02 / portrait / indoor authority",
     treatment: "monochrome-strong" as const,
     objectPositionClassName:
-      "object-[56%_26%] sm:object-[58%_30%] lg:object-[62%_36%] xl:object-[66%_40%]",
+      "object-[50%_18%] sm:object-[50%_20%] lg:object-[50%_22%] xl:object-[50%_24%]",
   },
 };
 
@@ -97,15 +97,15 @@ export const storyFrames: StoryFrame[] = [
     copy:
       "After years of international competition, Adrian now coaches with the same discipline he demanded from his own game: remove noise, sharpen patterns, and make each technical change survive real pace.",
     media: {
-      src: "/images/portrait-photo.jpg",
-      alt: "Monochrome portrait of a tennis player looking toward the court with calm expression",
+      src: "/images/authority-racket-ball.jpg",
+      alt: "Coach holding racket and ball before a session",
       orientation: "portrait",
       cropIntent: "negative-space-right",
       caption: "Authority portrait",
-      meta: "Shot 02 / portrait / quiet expression",
+      meta: "Shot 03 / portrait / pre-session focus",
       treatment: "monochrome-strong",
       objectPositionClassName:
-        "object-[58%_30%] sm:object-[60%_34%] lg:object-[64%_40%] xl:object-[68%_44%]",
+        "object-[54%_26%] sm:object-[56%_28%] lg:object-[58%_30%] xl:object-[60%_32%]",
     },
   },
   {
@@ -116,15 +116,15 @@ export const storyFrames: StoryFrame[] = [
     copy:
       "Sessions begin by isolating inefficient mechanics, rebuilding contact quality, and making every cue simple enough to repeat without hesitation.",
     media: {
-      src: "/images/serve-photo.jpg",
-      alt: "Black-and-white action photo of a tennis serve in motion",
+      src: "/images/program-private-rally.jpg",
+      alt: "Player working through a full stroke on court",
       orientation: "portrait",
       cropIntent: "centered-athlete",
       caption: "Serve mechanics",
-      meta: "Shot 03 / action / service chain",
+      meta: "Shot 04 / action / stroke rehearsal",
       treatment: "monochrome-strong",
       objectPositionClassName:
-        "object-[52%_20%] sm:object-[50%_22%] lg:object-[48%_28%]",
+        "object-[50%_32%] sm:object-[50%_34%] lg:object-[48%_36%]",
     },
   },
   {
@@ -135,15 +135,15 @@ export const storyFrames: StoryFrame[] = [
     copy:
       "Movement patterns are cleaned up before tactical layers are added, so players stop arriving late and start seeing the ball from balanced positions.",
     media: {
-      src: "/images/session-photo.jpg",
+      src: "/images/program-elite-net.jpg",
       alt: "Black-and-white tennis session frame with court action and strong contrast",
       orientation: "landscape",
       cropIntent: "wide-environment",
       caption: "Coach-athlete session",
-      meta: "Shot 04 / interaction / court spacing",
+      meta: "Shot 05 / environment / court geometry",
       treatment: "monochrome-soft",
       objectPositionClassName:
-        "object-[46%_42%] sm:object-[34%_46%] lg:object-[22%_50%] xl:object-[18%_52%]",
+        "object-[68%_44%] sm:object-[74%_48%] lg:object-[80%_52%] xl:object-[84%_54%]",
     },
   },
   {
@@ -154,15 +154,15 @@ export const storyFrames: StoryFrame[] = [
     copy:
       "Every correction is stress-tested with decision making, point construction, and match-like tempo so the new habit stays present when the score matters.",
     media: {
-      src: "/images/detail-photo.jpg",
-      alt: "Black-and-white detail photo focusing on hands, racket texture, and close contact mechanics",
-      orientation: "square",
-      cropIntent: "detail-close",
-      caption: "Detail study",
-      meta: "Shot 05 / detail / hands and grip",
-      treatment: "monochrome-strong",
+      src: "/images/method-coaching-session.jpg",
+      alt: "Coach feeding balls across the net during a live drill",
+      orientation: "landscape",
+      cropIntent: "wide-environment",
+      caption: "Transfer drill",
+      meta: "Shot 06 / transfer / live drill",
+      treatment: "monochrome-soft",
       objectPositionClassName:
-        "object-[72%_48%] sm:object-[68%_49%] lg:object-[62%_50%]",
+        "object-[50%_36%] sm:object-[50%_38%] lg:object-[52%_42%]",
     },
   },
 ];
@@ -175,15 +175,15 @@ export const programCards: ProgramCard[] = [
     tag: "One-to-one",
     emphasis: "wide",
     media: {
-      src: "/images/session-photo.jpg",
-      alt: "Wide black-and-white training frame with movement and court geometry",
+      src: "/images/method-player-action.jpg",
+      alt: "Player driving through a forehand on an outdoor court",
       orientation: "landscape",
       cropIntent: "wide-environment",
       caption: "Program frame",
-      meta: "Private / live court work",
+      meta: "Private / live correction",
       treatment: "monochrome-soft",
       objectPositionClassName:
-        "object-[30%_44%] sm:object-[22%_48%] lg:object-[14%_52%] xl:object-[12%_54%]",
+        "object-[52%_40%] sm:object-[54%_42%] lg:object-[56%_44%] xl:object-[60%_46%]",
     },
   },
   {
@@ -193,15 +193,15 @@ export const programCards: ProgramCard[] = [
     tag: "Long-term build",
     emphasis: "tall",
     media: {
-      src: "/images/coach-photo.jpg",
-      alt: "Monochrome portrait frame focused on coach presence and composure",
+      src: "/images/program-junior-shadow.jpg",
+      alt: "Long player shadow stretched over a marked court",
       orientation: "portrait",
       cropIntent: "centered-athlete",
-      caption: "Coach portrait",
-      meta: "Junior / progression block",
+      caption: "Movement frame",
+      meta: "Junior / movement rhythm",
       treatment: "monochrome-strong",
       objectPositionClassName:
-        "object-[50%_24%] sm:object-[52%_28%] lg:object-[55%_34%]",
+        "object-[50%_54%] sm:object-[50%_54%] lg:object-[50%_56%]",
     },
   },
   {
@@ -211,15 +211,15 @@ export const programCards: ProgramCard[] = [
     tag: "Diagnostic",
     emphasis: "compact",
     media: {
-      src: "/images/detail-photo.jpg",
-      alt: "Black-and-white close-up detail of hands and racket used for technical analysis framing",
-      orientation: "square",
+      src: "/images/program-technique-detail.jpg",
+      alt: "Close technical detail of legs and racket under tension",
+      orientation: "portrait",
       cropIntent: "detail-close",
       caption: "Technical detail",
-      meta: "Analysis / contact quality",
+      meta: "Analysis / kinetic detail",
       treatment: "monochrome-strong",
       objectPositionClassName:
-        "object-[72%_52%] sm:object-[66%_55%] lg:object-[58%_58%]",
+        "object-[52%_38%] sm:object-[54%_40%] lg:object-[56%_42%]",
     },
   },
   {
@@ -229,16 +229,15 @@ export const programCards: ProgramCard[] = [
     tag: "High performance",
     emphasis: "compact",
     media: {
-      src: "/images/serve-photo.jpg",
-      alt: "Black-and-white action frame with athletic tension and upward motion",
-      orientation: "portrait",
-      cropIntent: "centered-athlete",
+      src: "/images/results-court-shadow.jpg",
+      alt: "Court lines cutting through a tall player shadow",
+      orientation: "landscape",
+      cropIntent: "wide-environment",
       caption: "Performance frame",
-      meta: "Elite / match-ready intensity",
-      treatment: "monochrome-strong",
+      meta: "Elite / composure under load",
+      treatment: "monochrome-soft",
       objectPositionClassName:
-        "object-[58%_16%] sm:object-[57%_18%] lg:object-[56%_18%]",
-      mirror: true,
+        "object-[46%_50%] sm:object-[48%_52%] lg:object-[50%_54%]",
     },
   },
 ];
@@ -252,15 +251,15 @@ export const proofItems: ProofItem[] = [
     label: "Result",
     value: "Serve rebuild",
     media: {
-      src: "/images/hero-photo.jpg",
-      alt: "Black-and-white court environment emphasizing scale and pressure",
-      orientation: "portrait",
-      cropIntent: "wide-environment",
+      src: "/images/method-ball-detail.jpg",
+      alt: "Single tennis ball resting on clay before the next point",
+      orientation: "square",
+      cropIntent: "detail-close",
       caption: "Proof image",
-      meta: "Result / technical transfer",
-      treatment: "monochrome-soft",
+      meta: "Result / detail under pressure",
+      treatment: "monochrome-strong",
       objectPositionClassName:
-        "object-[72%_46%] sm:object-[74%_47%] lg:object-[76%_48%]",
+        "object-[52%_48%] sm:object-[52%_48%] lg:object-[52%_48%]",
     },
   },
   {
@@ -320,14 +319,14 @@ export const contactMeta = {
   note:
     "V1 uses a prefilled email draft instead of a backend booking flow. The layout is already ready for a future integrated form.",
   media: {
-    src: "/images/coach-photo.jpg",
-    alt: "Black-and-white portrait of the coach with a composed expression, used to anchor the booking section with a more personal frame",
+    src: "/images/booking-racket-still-life.jpg",
+    alt: "Racket and ball arranged in a quiet black-and-white still life",
     orientation: "portrait" as const,
-    cropIntent: "centered-athlete" as const,
-    caption: "Booking portrait",
-    meta: "Shot 06 / contact / composed portrait",
+    cropIntent: "detail-close" as const,
+    caption: "Booking still life",
+    meta: "Shot 07 / booking / calm close-up",
     treatment: "monochrome-strong" as const,
     objectPositionClassName:
-      "object-[50%_18%] sm:object-[52%_22%] lg:object-[54%_28%] xl:object-[56%_32%]",
+      "object-[52%_36%] sm:object-[54%_40%] lg:object-[56%_44%] xl:object-[58%_46%]",
   },
 };

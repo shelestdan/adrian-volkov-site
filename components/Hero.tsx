@@ -111,6 +111,7 @@ export default function Hero() {
                     className="aspect-[3/4] xl:aspect-[4/5]"
                     sizes="(min-width: 1280px) 19rem, 0px"
                     parallax={8}
+                    showCaption={false}
                   />
                 </div>
               </motion.div>

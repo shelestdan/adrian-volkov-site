@@ -21,6 +21,7 @@ export default function Contact() {
               className="aspect-[5/6] sm:aspect-[4/3] lg:aspect-[4/5] xl:aspect-[5/6]"
               sizes="(min-width: 1024px) 34vw, 100vw"
               parallax={10}
+              showCaption={false}
             />
           </Reveal>
 
