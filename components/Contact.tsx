@@ -7,8 +7,8 @@ import { contactMeta } from "@/lib/site-content";
 export default function Contact() {
   return (
     <section id="booking" className="scene pb-[calc(var(--scene-space)*0.9)]">
-      <div className="shell-inner grid gap-10 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] lg:items-start">
-        <div className="min-w-0 space-y-8">
+      <div className="shell-inner golden-grid">
+        <div className="golden-minor min-w-0 space-y-8">
           <SectionHeading
             eyebrow={contactMeta.eyebrow}
             title={contactMeta.title}
@@ -53,7 +53,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="space-y-2 sm:col-span-2">
-              <p className="meta-label">Implementation note</p>
+              <p className="meta-label">Booking process</p>
               <p className="max-w-2xl text-sm leading-6 text-[#888888]">
                 {contactMeta.note}
               </p>
@@ -61,7 +61,7 @@ export default function Contact() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.18} className="min-w-0">
+        <Reveal delay={0.18} className="golden-major min-w-0">
           <ContactForm />
         </Reveal>
       </div>

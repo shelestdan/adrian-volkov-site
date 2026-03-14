@@ -13,18 +13,18 @@ export default function About() {
 
   return (
     <section id="authority" className="scene">
-      <div className="shell-inner grid gap-12 xl:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] xl:items-start">
+      <div className="shell-inner golden-grid">
         <SectionHeading
           eyebrow={authorityFrame.eyebrow}
           title={authorityFrame.title}
           description={authorityFrame.copy}
-          className="min-w-0 max-w-xl"
+          className="golden-minor min-w-0 max-w-xl"
           titleClassName="max-w-lg"
         />
 
-        <Reveal delay={0.12}>
-          <div className="editorial-panel grid gap-5 p-4 sm:p-5 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:gap-6 lg:p-6">
-            <div className="order-2 min-w-0 lg:order-1">
+        <Reveal delay={0.12} className="golden-major">
+          <div className="editorial-panel golden-panel p-4 sm:p-5 xl:p-6">
+            <div className="golden-panel-media order-2 min-w-0 lg:order-1">
               <MediaFrame
                 asset={authorityFrame.media}
                 className="aspect-[4/5] w-full lg:h-full lg:min-h-[32rem]"
@@ -34,7 +34,7 @@ export default function About() {
               />
             </div>
 
-            <div className="order-1 flex min-w-0 h-full flex-col justify-between gap-5 lg:order-2">
+            <div className="golden-panel-copy order-1 flex min-w-0 h-full flex-col justify-between gap-5 lg:order-2">
               <div className="space-y-4">
                 <div className="info-card p-5 sm:p-6">
                   <p className="section-note">Competitive background</p>
@@ -58,7 +58,7 @@ export default function About() {
               <div className="grid gap-3 border-t border-white/8 pt-4 sm:grid-cols-[1fr_auto] sm:items-end">
                 <p className="meta-label text-[#CCCCCC]">{authorityFrame.media.meta}</p>
                 <span className="section-note text-[#888888]">
-                  Editorial portrait / pre-session calm
+                  Match-tested coaching / individual precision
                 </span>
               </div>
             </div>

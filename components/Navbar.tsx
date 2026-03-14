@@ -11,12 +11,12 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-          className="chrome-bar flex items-center justify-between gap-4 px-4 py-3 sm:px-5"
+          className="chrome-bar flex items-center justify-between gap-4 px-4 py-3 sm:px-5 lg:px-6"
         >
           <a href="#top" className="font-display text-sm tracking-[0.32em] text-white sm:text-base">
             ADRIAN VOLKOV
           </a>
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-7 md:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}

@@ -9,8 +9,8 @@ import { proofItems } from "@/lib/site-content";
 export default function Testimonials() {
   return (
     <section id="results" className="scene">
-      <div className="shell-inner grid gap-12 xl:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] xl:items-start">
-        <div className="min-w-0 space-y-8">
+      <div className="shell-inner golden-grid">
+        <div className="golden-minor min-w-0 space-y-8">
           <SectionHeading
             eyebrow="Results"
             title="Results that stay visible when the score tightens."
@@ -31,7 +31,7 @@ export default function Testimonials() {
           </Reveal>
         </div>
 
-        <div className="min-w-0 grid gap-4">
+        <div className="golden-major min-w-0 grid gap-4">
           {proofItems.map((item, index) => (
             <Reveal key={item.author} delay={index * 0.08}>
               <motion.article

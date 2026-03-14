@@ -8,16 +8,22 @@ import { programCards } from "@/lib/site-content";
 
 const programHighlights = [
   { label: "Formats", value: "4 coaching blocks" },
-  { label: "Build", value: "Technique-first" },
-  { label: "Transfer", value: "Match-ready" },
+  { label: "Build", value: "Technique to match play" },
+  { label: "Players", value: "Competitive focus" },
+];
+const programFootnotes = [
+  "Private court work / fast diagnosis",
+  "Long-term progression / junior rhythm",
+  "Stroke diagnostics / cleaner sequencing",
+  "Tournament build / pressure preparation",
 ];
 
 export default function Programs() {
   return (
     <section id="programs" className="scene">
       <div className="shell-inner space-y-10 xl:space-y-12">
-        <div className="grid gap-8 xl:grid-cols-[minmax(0,0.84fr)_minmax(0,1.16fr)] xl:items-end">
-          <div className="min-w-0 space-y-8">
+        <div className="golden-grid">
+          <div className="golden-minor min-w-0 space-y-8">
             <SectionHeading
               eyebrow="Programs"
               title="Focused coaching blocks built for pressure."
@@ -27,11 +33,12 @@ export default function Programs() {
             />
           </div>
 
-          <Reveal delay={0.12} className="min-w-0">
+          <Reveal delay={0.12} className="golden-major min-w-0">
             <div className="editorial-panel grid gap-5 p-5 sm:p-6 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-end">
               <div className="space-y-4">
                 <p className="section-note leading-7 text-[#888888]">
-                  Distinct photography. Clear hierarchy. Clean editorial rhythm.
+                  Private blocks for stroke correction, player development, and
+                  tournament readiness.
                 </p>
                 <p className="max-w-2xl text-[0.98rem] leading-8 text-[#CCCCCC] sm:text-[1.03rem]">
                   From one-to-one correction to long-term development and
@@ -54,34 +61,32 @@ export default function Programs() {
           </Reveal>
         </div>
 
-        <div className="grid min-w-0 gap-5 md:grid-cols-2 xl:grid-cols-12 xl:auto-rows-[minmax(31rem,auto)] lg:gap-6">
+        <div className="golden-mosaic min-w-0 gap-5 md:grid-cols-2 lg:gap-6">
           {programCards.map((program, index) => {
             const isSplitLayout = index === 0 || index === 3;
             const shellClass =
               index === 0
-                ? "md:col-span-2 xl:col-span-7 min-h-[30rem] xl:min-h-[31rem]"
+                ? "golden-span-major md:col-span-2 min-h-[30rem] xl:min-h-[32rem]"
                 : index === 1
-                  ? "md:col-span-2 xl:col-span-5 min-h-[30rem] xl:min-h-[31rem]"
+                  ? "golden-span-minor md:col-span-2 min-h-[30rem] xl:min-h-[32rem]"
                   : index === 2
-                    ? "md:col-span-1 xl:col-span-5 min-h-[28rem] xl:min-h-[30rem]"
-                    : "md:col-span-1 xl:col-span-7 min-h-[28rem] xl:min-h-[30rem]";
+                    ? "golden-span-minor md:col-span-1 min-h-[27rem] xl:min-h-[29rem]"
+                    : "golden-span-major md:col-span-1 min-h-[27rem] xl:min-h-[29rem]";
             const layoutClass = isSplitLayout
-              ? index === 0
-                ? "xl:grid-cols-[minmax(0,1.08fr)_minmax(18rem,0.92fr)] xl:items-stretch"
-                : "xl:grid-cols-[minmax(18rem,0.9fr)_minmax(0,1.1fr)] xl:items-stretch"
+              ? "golden-panel xl:items-stretch"
               : "";
             const mediaWrapClass = isSplitLayout
               ? index === 0
-                ? "order-1 xl:order-2"
-                : "order-1"
+                ? "golden-panel-media order-1 xl:order-2"
+                : "golden-panel-media order-1"
               : "order-1";
             const copyWrapClass = isSplitLayout
               ? index === 0
-                ? "order-2 xl:order-1"
-                : "order-2"
+                ? "golden-panel-copy order-2 xl:order-1"
+                : "golden-panel-copy order-2"
               : "order-2";
             const mediaClass = isSplitLayout
-              ? "aspect-[16/10] xl:h-full xl:min-h-[22rem]"
+              ? "aspect-[16/11] xl:h-full xl:min-h-[24rem]"
               : program.media.orientation === "portrait"
                 ? "aspect-[5/6] xl:aspect-[4/5]"
                 : "aspect-[16/10] xl:aspect-[16/11]";
@@ -130,12 +135,9 @@ export default function Programs() {
                         </p>
                       </div>
 
-                      <div className="grid gap-3 border-t border-white/8 pt-4 sm:grid-cols-[1fr_auto] sm:items-end">
-                        <p className="meta-label text-[#CCCCCC]">{program.media.meta}</p>
-                        <span className="section-note text-[#888888]">
-                          Scroll reveal / hover lift
-                        </span>
-                      </div>
+                      <p className="section-note border-t border-white/8 pt-4 text-[#888888]">
+                        {programFootnotes[index]}
+                      </p>
                     </div>
                   </div>
                 </motion.article>

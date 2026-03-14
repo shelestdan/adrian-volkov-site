@@ -52,7 +52,7 @@ export const navLinks = [
 ];
 
 export const hero = {
-  eyebrow: "Stockholm / Former ATP Challenger / Private coaching",
+  eyebrow: "Stockholm / Former ATP Challenger / Private tennis coaching",
   headline: ["Build A Game", "That Holds Under Pressure"],
   description:
     "Adrian Volkov works with ambitious players who need quieter technique, cleaner movement patterns, and training blocks designed to survive live match tempo.",
@@ -70,7 +70,7 @@ export const hero = {
     cropIntent: "negative-space-left" as const,
     priority: true,
     caption: "Hero frame",
-    meta: "Shot 01 / hero / clay shadow",
+    meta: "Match-ready preparation / baseline composure",
     treatment: "monochrome-strong" as const,
     objectPositionClassName:
       "object-[70%_24%] sm:object-[72%_24%] md:object-[74%_26%] lg:object-[76%_28%]",
@@ -81,7 +81,7 @@ export const hero = {
     orientation: "portrait" as const,
     cropIntent: "negative-space-right" as const,
     caption: "Portrait crop",
-    meta: "Shot 02 / portrait / indoor authority",
+    meta: "Coach presence / indoor discipline",
     treatment: "monochrome-strong" as const,
     objectPositionClassName:
       "object-[50%_18%] sm:object-[50%_20%] lg:object-[50%_22%] xl:object-[50%_24%]",
@@ -102,7 +102,7 @@ export const storyFrames: StoryFrame[] = [
       orientation: "portrait",
       cropIntent: "negative-space-right",
       caption: "Authority portrait",
-      meta: "Shot 03 / portrait / pre-session focus",
+      meta: "Former challenger / private coaching focus",
       treatment: "monochrome-strong",
       objectPositionClassName:
         "object-[54%_26%] sm:object-[56%_28%] lg:object-[58%_30%] xl:object-[60%_32%]",
@@ -121,7 +121,7 @@ export const storyFrames: StoryFrame[] = [
       orientation: "portrait",
       cropIntent: "centered-athlete",
       caption: "Serve mechanics",
-      meta: "Shot 04 / action / stroke rehearsal",
+      meta: "Stroke rehearsal / repeatable contact",
       treatment: "monochrome-strong",
       objectPositionClassName:
         "object-[50%_32%] sm:object-[50%_34%] lg:object-[48%_36%]",
@@ -140,7 +140,7 @@ export const storyFrames: StoryFrame[] = [
       orientation: "landscape",
       cropIntent: "wide-environment",
       caption: "Coach-athlete session",
-      meta: "Shot 05 / environment / court geometry",
+      meta: "Court positioning / balanced arrival",
       treatment: "monochrome-soft",
       objectPositionClassName:
         "object-[68%_44%] sm:object-[74%_48%] lg:object-[80%_52%] xl:object-[84%_54%]",
@@ -159,7 +159,7 @@ export const storyFrames: StoryFrame[] = [
       orientation: "landscape",
       cropIntent: "wide-environment",
       caption: "Transfer drill",
-      meta: "Shot 06 / transfer / live drill",
+      meta: "Live-ball transfer / match tempo",
       treatment: "monochrome-soft",
       objectPositionClassName:
         "object-[50%_36%] sm:object-[50%_38%] lg:object-[52%_42%]",
@@ -180,7 +180,7 @@ export const programCards: ProgramCard[] = [
       orientation: "landscape",
       cropIntent: "wide-environment",
       caption: "Program frame",
-      meta: "Private / live correction",
+      meta: "Private coaching / live correction",
       treatment: "monochrome-soft",
       objectPositionClassName:
         "object-[52%_40%] sm:object-[54%_42%] lg:object-[56%_44%] xl:object-[60%_46%]",
@@ -198,7 +198,7 @@ export const programCards: ProgramCard[] = [
       orientation: "portrait",
       cropIntent: "centered-athlete",
       caption: "Movement frame",
-      meta: "Junior / movement rhythm",
+      meta: "Junior development / movement rhythm",
       treatment: "monochrome-strong",
       objectPositionClassName:
         "object-[50%_54%] sm:object-[50%_54%] lg:object-[50%_56%]",
@@ -216,7 +216,7 @@ export const programCards: ProgramCard[] = [
       orientation: "portrait",
       cropIntent: "detail-close",
       caption: "Technical detail",
-      meta: "Analysis / kinetic detail",
+      meta: "Technique analysis / kinetic detail",
       treatment: "monochrome-strong",
       objectPositionClassName:
         "object-[52%_38%] sm:object-[54%_40%] lg:object-[56%_42%]",
@@ -234,7 +234,7 @@ export const programCards: ProgramCard[] = [
       orientation: "landscape",
       cropIntent: "wide-environment",
       caption: "Performance frame",
-      meta: "Elite / composure under load",
+      meta: "Elite program / composure under load",
       treatment: "monochrome-soft",
       objectPositionClassName:
         "object-[46%_50%] sm:object-[48%_52%] lg:object-[50%_54%]",
@@ -256,7 +256,7 @@ export const proofItems: ProofItem[] = [
       orientation: "square",
       cropIntent: "detail-close",
       caption: "Proof image",
-      meta: "Result / detail under pressure",
+      meta: "Serve rebuild / match transfer",
       treatment: "monochrome-strong",
       objectPositionClassName:
         "object-[52%_48%] sm:object-[52%_48%] lg:object-[52%_48%]",
@@ -275,7 +275,7 @@ export const proofItems: ProofItem[] = [
       orientation: "portrait",
       cropIntent: "negative-space-right",
       caption: "Environment image",
-      meta: "Junior / long-term trust",
+      meta: "Junior progress / competitive belief",
       treatment: "monochrome-strong",
       objectPositionClassName:
         "object-[54%_28%] sm:object-[56%_32%] lg:object-[60%_38%]",
@@ -294,7 +294,7 @@ export const proofItems: ProofItem[] = [
       orientation: "landscape",
       cropIntent: "wide-environment",
       caption: "Detail image",
-      meta: "Confidence / repeatability",
+      meta: "Precision / repeatable execution",
       treatment: "monochrome-soft",
       objectPositionClassName:
         "object-[72%_40%] sm:object-[80%_44%] lg:object-[86%_46%]",
@@ -317,14 +317,14 @@ export const contactMeta = {
     "Tournament preparation",
   ],
   note:
-    "V1 uses a prefilled email draft instead of a backend booking flow. The layout is already ready for a future integrated form.",
+    "Every booking starts with a direct email exchange so the first session is built around the player's level, goals, and competitive calendar.",
   media: {
     src: "/images/booking-racket-still-life.jpg",
     alt: "Racket and ball arranged in a quiet black-and-white still life",
     orientation: "portrait" as const,
     cropIntent: "detail-close" as const,
     caption: "Booking still life",
-    meta: "Shot 07 / booking / calm close-up",
+    meta: "Booking / direct first contact",
     treatment: "monochrome-strong" as const,
     objectPositionClassName:
       "object-[52%_36%] sm:object-[54%_40%] lg:object-[56%_44%] xl:object-[58%_46%]",

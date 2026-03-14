@@ -6,7 +6,7 @@ import "@/styles/globals.css";
 export const metadata: Metadata = {
   title: "Adrian Volkov | Professional Tennis Coach",
   description:
-    "Cinematic editorial coaching website for Adrian Volkov, former ATP Challenger player and elite tennis coach based in Stockholm.",
+    "Private tennis coaching in Stockholm for competitive players who need cleaner technique, sharper movement, and match-ready training blocks.",
 };
 
 export default function RootLayout({

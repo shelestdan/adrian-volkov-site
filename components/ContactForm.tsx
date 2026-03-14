@@ -15,7 +15,7 @@ export default function ContactForm() {
     const message = String(formData.get("message") ?? "").trim();
 
     if (!name || !email || !message) {
-      setStatus("Complete all fields before creating the booking draft.");
+      setStatus("Complete each field before sending the training inquiry.");
       return;
     }
 
@@ -24,7 +24,7 @@ export default function ContactForm() {
       `Name: ${name}\nEmail: ${email}\n\n${message}`,
     );
 
-    setStatus("Opening your email client with a prefilled booking draft.");
+    setStatus("Opening your email draft so the inquiry can be sent directly.");
     window.location.href = `mailto:book@volkovtennis.com?subject=${subject}&body=${body}`;
   }
 
@@ -34,7 +34,7 @@ export default function ContactForm() {
         <div className="space-y-3">
           <p className="meta-label">Inquiry sheet</p>
           <p className="balance font-display text-[clamp(2rem,4vw,3.5rem)] leading-[0.94] tracking-[-0.06em] text-white">
-            Book training with a calmer, more exact starting point.
+            Book training with a precise competitive plan.
           </p>
         </div>
 
@@ -75,10 +75,10 @@ export default function ContactForm() {
 
         <div className="booking-divider flex flex-col gap-4 pt-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-sm space-y-2">
-            <p className="meta-label">Flow</p>
+            <p className="meta-label">Next step</p>
             <p className="text-sm leading-6 text-[#888888]">
               {status ??
-                "Submitting opens a prefilled email draft so the booking experience works cleanly without backend wiring in v1."}
+                "Submitting opens your email with the inquiry filled in, so Adrian can reply with the right format, schedule, and next step."}
             </p>
           </div>
           <motion.button

@@ -8,6 +8,11 @@ import { storyFrames } from "@/lib/site-content";
 import { useSafeReducedMotion } from "@/lib/use-safe-reduced-motion";
 
 const methodFrames = storyFrames.slice(1);
+const methodNotes = [
+  "Stroke correction / repeatable cue",
+  "Footwork control / early balance",
+  "Live points / pressure transfer",
+];
 const methodPrinciples = [
   {
     label: "Observe",
@@ -28,8 +33,8 @@ export default function Philosophy() {
 
   return (
     <section id="method" className="scene">
-      <div className="shell-inner grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
-        <div className="min-w-0 space-y-8 lg:story-sticky lg:pr-8">
+      <div className="shell-inner golden-grid">
+        <div className="golden-minor min-w-0 space-y-8 lg:story-sticky lg:pr-8">
           <Reveal>
             <p className="eyebrow">Method</p>
           </Reveal>
@@ -70,28 +75,24 @@ export default function Philosophy() {
                   Build quiet mechanics. Keep the cue. Raise the pace late.
                 </p>
                 <span className="section-note text-[#888888]">
-                  Editorial method rail
+                  Session structure / on-court progression
                 </span>
               </div>
             </div>
           </Reveal>
         </div>
 
-        <div className="min-w-0 space-y-10 lg:space-y-12">
+        <div className="golden-major min-w-0 space-y-[var(--golden-gap)]">
           {methodFrames.map((frame, index) => (
             <motion.article
               key={frame.id}
               whileHover={reducedMotion ? undefined : { y: -6 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className={`story-surface ${reducedMotion ? "" : "story-card"} grid gap-6 p-6 sm:p-8 lg:gap-8 lg:p-9 ${
-                index % 2 === 0
-                  ? "lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]"
-                  : "lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)]"
-              }`}
+              className={`story-surface golden-panel ${reducedMotion ? "" : "story-card"} gap-6 p-6 sm:p-8 xl:p-9`}
             >
               <Reveal
                 delay={index * 0.05}
-                className={`min-w-0 space-y-5 self-start ${index % 2 === 0 ? "order-1" : "order-2"}`}
+                className={`golden-panel-copy min-w-0 space-y-5 self-start ${index % 2 === 0 ? "order-1" : "order-2"}`}
               >
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="media-chip">{frame.eyebrow}</span>
@@ -104,17 +105,14 @@ export default function Philosophy() {
                 <p className="text-[1rem] leading-8 text-[#CCCCCC] sm:text-[1.06rem]">
                   {frame.copy}
                 </p>
-                <div className="grid gap-3 border-t border-white/8 pt-4 sm:grid-cols-[1fr_auto] sm:items-end">
-                  <p className="meta-label text-[#CCCCCC]">{frame.media.meta}</p>
-                  <span className="section-note text-[#888888]">
-                    Live correction / match transfer
-                  </span>
-                </div>
+                <p className="section-note border-t border-white/8 pt-4 text-[#888888]">
+                  {methodNotes[index]}
+                </p>
               </Reveal>
 
               <Reveal
                 delay={0.08}
-                className={`min-w-0 self-stretch ${index % 2 === 0 ? "order-2" : "order-1"} lg:hidden`}
+                className={`golden-panel-media min-w-0 self-stretch ${index % 2 === 0 ? "order-2" : "order-1"} lg:hidden`}
               >
                 <MediaFrame
                   asset={frame.media}
@@ -127,7 +125,7 @@ export default function Philosophy() {
 
               <Reveal
                 delay={0.1}
-                className={`hidden min-w-0 self-stretch lg:block ${index % 2 === 0 ? "order-2" : "order-1"}`}
+                className={`golden-panel-media hidden min-w-0 self-stretch lg:block ${index % 2 === 0 ? "order-2" : "order-1"}`}
               >
                 <MediaFrame
                   asset={frame.media}

@@ -23,7 +23,7 @@ export default function Hero() {
           <div className="pointer-events-none absolute inset-0 z-[2] bg-[linear-gradient(110deg,rgba(0,0,0,0.88)_0%,rgba(0,0,0,0.62)_38%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.72)_100%)]" />
           <div className="pointer-events-none absolute inset-0 z-[3] bg-[radial-gradient(circle_at_18%_22%,rgba(255,255,255,0.08),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent_24%,rgba(0,0,0,0.34)_100%)]" />
 
-          <div className="absolute inset-0 z-[5] flex flex-col justify-between p-6 sm:p-8 lg:p-12 xl:p-14">
+          <div className="absolute inset-0 z-[5] flex flex-col justify-between p-6 sm:p-8 lg:p-10 xl:p-12">
             <motion.p
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
@@ -33,8 +33,8 @@ export default function Hero() {
               {hero.eyebrow}
             </motion.p>
 
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-end">
-              <div className="min-w-0 max-w-4xl space-y-7">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(17rem,0.618fr)] lg:items-end lg:gap-[clamp(2rem,3vw,3.75rem)]">
+              <div className="min-w-0 max-w-[42rem] space-y-7">
                 <h1 className="font-display text-[clamp(3.4rem,8vw,7.3rem)] leading-[0.88] tracking-[-0.075em] text-white">
                   {hero.headline.map((line, index) => (
                     <motion.span
@@ -80,7 +80,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: easing, delay: 0.4 }}
-                  className="grid max-w-3xl gap-4 sm:grid-cols-3"
+                  className="grid max-w-[38rem] gap-3 sm:grid-cols-3"
                 >
                   {hero.proofRail.map((item) => (
                     <div
@@ -118,9 +118,6 @@ export default function Hero() {
             </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 z-[4] h-32 bg-gradient-to-t from-black to-transparent" />
-          <div className="absolute right-6 top-6 z-[6] hidden lg:block">
-            <span className="media-chip">{hero.primaryMedia.meta}</span>
-          </div>
         </div>
       </div>
     </section>
